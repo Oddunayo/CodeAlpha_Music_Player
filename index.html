@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pulse — Music Player</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <main class="player">
+    <header class="topbar">
+      <div class="brand"><span class="brand-icon">♫</span> PULSE</div>
+      <span class="tag">YOUR MUSIC, YOUR MOMENT</span>
+    </header>
+
+    <section class="hero">
+      <div class="cover-wrap">
+        <img id="cover" src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&w=900&q=85" alt="Album artwork">
+        <div class="cover-shade"></div>
+        <div class="cover-label"><span class="live-dot"></span> NOW PLAYING</div>
+      </div>
+      <div class="track-info">
+        <p class="eyebrow">FEATURED TRACK</p>
+        <h1 id="title">Midnight City</h1>
+        <p id="artist">M83 · Hurry Up, We're Dreaming</p>
+        <div class="visualizer" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      </div>
+    </section>
+
+    <section class="controls">
+      <div class="time-row"><span id="currentTime">0:00</span><span id="duration">0:00</span></div>
+      <input id="progress" class="range progress" type="range" min="0" max="100" value="0" aria-label="Track progress">
+      <div class="control-row">
+        <button id="shuffle" class="icon-btn" title="Shuffle" aria-label="Shuffle">⤨</button>
+        <button id="prev" class="icon-btn" title="Previous track" aria-label="Previous track">⏮</button>
+        <button id="play" class="play-btn" title="Play" aria-label="Play">▶</button>
+        <button id="next" class="icon-btn" title="Next track" aria-label="Next track">⏭</button>
+        <button id="repeat" class="icon-btn" title="Repeat" aria-label="Repeat">↻</button>
+      </div>
+      <div class="volume-row"><span>🔈</span><input id="volume" class="range" type="range" min="0" max="1" step="0.01" value="0.75" aria-label="Volume"><span>🔊</span></div>
+    </section>
+
+    <section class="playlist-section">
+      <div class="playlist-heading"><h2>Up next</h2><span id="trackCount">3 TRACKS</span></div>
+      <div id="playlist" class="playlist"></div>
+    </section>
+    <footer>MADE FOR THE LOVE OF MUSIC <span>•</span> CODEALPHA</footer>
+    <audio id="audio"></audio>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
